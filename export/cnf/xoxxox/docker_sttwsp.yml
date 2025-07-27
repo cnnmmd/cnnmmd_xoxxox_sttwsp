@@ -1,0 +1,16 @@
+networks:
+  default:
+    name: xoxxox_netmid
+    external: true
+services:
+  xoxxox_sttwsp:
+    image: xoxxox_envoaw:001
+    container_name: xoxxox_sttwsp
+    volumes:
+    - ../../../export:/opt/common
+    - ../../../import/cnnmmd_xoxxox_ttsvit/appwsp/wsp:/root/.cache/whisper
+    env_file:
+    - ./envdir.txt
+    ports:
+    - 16101:80
+    command: "python /opt/common/bin/xoxxox/srvstt.py --engine xoxxox/engine_sttwsp"
