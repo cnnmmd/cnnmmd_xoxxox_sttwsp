@@ -8,5 +8,4 @@ RUN apt-get ${OPTAPT} -y install python3
 RUN apt-get ${OPTAPT} -y install pip
 RUN ln -s /usr/bin/python3.10 /usr/bin/python
 RUN pip install openai-whisper
-RUN pip install wave
 RUN pip install aiohttp
