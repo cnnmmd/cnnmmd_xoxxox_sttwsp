@@ -9,10 +9,10 @@ RUN apt-get ${OPTAPT} -y install pip
 RUN ln -s /usr/bin/python3.10 /usr/bin/python
 RUN ARC=$(uname -m) && \
   if test "${ARC}" = 'x86_64'; \
-  then; \
+  then \
     pip install torch --index-url https://download.pytorch.org/whl/cpu; \
-  else; \
+  else \
     pip install torch; \
-  fi;
+  fi
 RUN pip install openai-whisper
 RUN pip install aiohttp
