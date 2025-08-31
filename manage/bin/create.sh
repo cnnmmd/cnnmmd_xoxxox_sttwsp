@@ -5,4 +5,9 @@ source "${pthtop}"/manage/lib/params.sh
 source "${pthtop}"/manage/lib/shared.sh
 source "${pthcrr}"/params.sh
 
+pthapp="${pthsrc}"/appwsp
+
 addimg ${imgtgt} "${cnfimg}" "${pthdoc}"
+test -d "${pthapp}" || mkdir "${pthapp}"
+cd "${pthapp}"
+test -d wsp || mkdir wsp

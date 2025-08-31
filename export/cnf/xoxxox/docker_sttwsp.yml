@@ -8,7 +8,7 @@ services:
     container_name: xoxxox_sttwsp
     volumes:
     - ../../../export:/opt/common
-    - ../../../import/cnnmmd_xoxxox_ttsvit/appwsp/wsp:/root/.cache/whisper
+    - ../../../import/cnnmmd_xoxxox_sttwsp/appwsp/wsp:/root/.cache/whisper
     env_file:
     - ./envdir.txt
     ports:
